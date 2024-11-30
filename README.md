@@ -9,7 +9,7 @@ sudo add-apt-repository ppa:oisf/suricata-stable
 sudo apt-get update
 sudo apt-get install suricata -y
 
-## Step 2: Add Emerging Threats Rules
+##  Step 2: Add Emerging Threats Rules
 Download the latest Suricata rules from Emerging Threats and place them in the appropriate directory.
 ---bash
 cd /tmp/
