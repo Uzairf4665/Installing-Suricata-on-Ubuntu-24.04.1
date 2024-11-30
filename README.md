@@ -4,19 +4,20 @@ Follow this guide to install and configure Suricata IDS on an Ubuntu system. The
 ## Step 1: Install Suricata
 Begin by adding the Suricata stable repository to your system, updating your package lists, and installing Suricata.
 
-```bash
+```
 sudo add-apt-repository ppa:oisf/suricata-stable
 sudo apt-get update
 sudo apt-get install suricata -y
-
-##  Step 2: Add Emerging Threats Rules
+---
+#Step 2. Add Emerging Threats Rules
 Download the latest Suricata rules from Emerging Threats and place them in the appropriate directory.
----bash
+---
 cd /tmp/
 curl -LO https://rules.emergingthreats.net/open/suricata-6.0.8/emerging.rules.tar.gz
 sudo tar -xvzf emerging.rules.tar.gz
 sudo mv rules/*.rules /etc/suricata/rules/
 sudo chmod 640 /etc/suricata/rules/*.rules
+---
 
 ## Step 3: Configure Suricata
 Modify the Suricata configuration file to define your network settings and load rules. Open the file:
